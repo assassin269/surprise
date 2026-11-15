@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Message Important</title>
+<style>
+body{margin:0;padding:0;font-family:Arial,sans-serif;background:linear-gradient(45deg,#ff00cc,#3333ff,#00ccff,#ffcc00,#ff0066);background-size:400% 400%;animation:gradientBG 15s ease infinite}
+@keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.container{display:flex;justify-content:center;align-items:center;height:100vh;padding:20px}
+.card{background:rgba(255,255,255,0.15);backdrop-filter:blur(20px);border-radius:30px;padding:40px;box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);border:2px solid rgba(255,255,255,0.2);max-width:600px;width:100%;text-align:center}
+h1{font-size:2.5em;margin-bottom:20px;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,0.5)}
+.intro-text{font-size:1.2em;line-height:1.6;margin-bottom:30px;text-align:left;padding:20px;background:rgba(255,255,255,0.1);border-radius:20px;border:1px solid rgba(255,255,255,0.2);white-space:pre-line;color:#fff;text-shadow:1px 1px 2px rgba(0,0,0,0.5)}
+.warning-text{font-size:1em;color:#ffcccc;margin-bottom:20px;font-weight:bold;text-shadow:1px 1px 2px rgba(0,0,0,0.5)}
+.btn{background:linear-gradient(45deg,#ff00cc,#3333ff,#00ccff);color:white;border:none;padding:15px 40px;font-size:1.2em;border-radius:50px;cursor:pointer;font-weight:bold;box-shadow:0 10px 30px rgba(0,0,0,0.3);text-decoration:none;display:inline-block;margin:0 auto;transition:transform 0.3s,box-shadow 0.3s}
+.btn:hover{transform:scale(1.05);box-shadow:0 15px 40px rgba(0,0,0,0.5)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card">
+<h1>❤️ Message Important</h1>
+<div class="intro-text">
+Chère sœur,
+
+Je t'écris ces mots car j'en ai assez de faire semblant. 
+Je ne suis pas doué pour les discours, mais je dois te dire 
+à quel point tu comptes pour moi.
+
+Tu es ma sœur, mon sang, ma famille. Et même si je ne le 
+montre pas toujours, je t'aime plus que tout.
+
+J'ai quelque chose d'important à te dire, mais je dois 
+vérifier que c'est bien toi avant de continuer.
+</div>
+<div class="warning-text">
+⚠️ Pour accéder au message secret et vérifier votre identité, cliquez sur le bouton ci-dessous.
+</div>
+<button class="btn" onclick="goToLogin()">Voir le message</button>
+</div>
+</div>
+<script>
+function goToLogin(){window.location.href='/login'}
+</script>
+</body>
+</html>
